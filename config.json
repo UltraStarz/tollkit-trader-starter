@@ -1,0 +1,12 @@
+{
+  "strategy": "dip-buyer",
+  "interval_minutes": 5,
+  "chain": "base",
+  "token": "ETH",
+  "strategies": {
+    "dca": { "amount_usd": 10, "every_hours": 24 },
+    "dip-buyer": { "amount_usd": 20, "dip_pct": 4, "cooldown_hours": 12, "take_profit_pct": 6 },
+    "momentum": { "amount_usd": 25, "fast": 12, "slow": 48, "candle_seconds": 3600 },
+    "rebalance": { "target_token_pct": 50, "band_pct": 5, "max_trade_usd": 50 }
+  }
+}

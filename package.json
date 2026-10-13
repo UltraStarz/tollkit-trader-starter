@@ -1,0 +1,26 @@
+{
+  "name": "tollkit-trader-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A starter trading bot for Tollkit Wallet: example strategies, paper trading at live prices, limits and approvals built in.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "paper": "BOT_MODE=paper tsx src/bot.ts",
+    "start": "tsx src/bot.ts",
+    "once": "BOT_ONCE=1 tsx src/bot.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck && tsx test/strategies.test.ts"
+  },
+  "dependencies": {
+    "tollkit-wallet": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
