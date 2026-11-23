@@ -1,6 +1,6 @@
-# Tollkit Trader Starter
+# TOLLkit Trader Starter
 
-A starter trading bot built on [Tollkit Wallet](https://github.com/UltraStarz/tollkit-wallet). It ships with four example strategies, runs on pretend money at live prices by default, and trades for real only when you switch it to live. Even then it stays inside the spending limits and approvals you set in the wallet.
+A starter trading bot built on [TOLLkit Wallet](https://github.com/UltraStarz/tollkit-wallet). It ships with four example strategies, runs on pretend money at live prices by default, and trades for real only when you switch it to live. Even then it stays inside the spending limits and approvals you set in the wallet.
 
 You write or choose the strategy. The bot follows it exactly.
 
@@ -37,7 +37,7 @@ Prices come from Coinbase's public market data. Trades go through 0x on Base and
 3. Set limits that match what you're willing to lose: `npx tollkit-wallet budget per_trade_usd=50 daily_trades_usd=200`. Turn on Telegram approvals for bigger trades with `npx tollkit-wallet telegram <bot-token> <chat-id>`.
 4. Set `BOT_MODE=live` in `.env`, then run `npm start`.
 
-Every trade pays Tollkit Wallet's flat 0.5% fee (0x may add 0.15% on some Base and Ethereum pairs). Trades show up in `npx tollkit-wallet receipts` and in the dashboard (`npx tollkit-wallet ui`).
+Every trade pays TOLLkit Wallet's flat 0.5% fee (0x may add 0.15% on some Base and Ethereum pairs). Trades show up in `npx tollkit-wallet receipts` and in the dashboard (`npx tollkit-wallet ui`).
 
 ## Running it 24/7
 
@@ -47,7 +47,7 @@ The bot trades only while it's running. Here are three ways to keep it going:
 - **A small Linux server:** run it as a systemd service. Copy the wallet folder (`~/.tollkit-wallet`) and a password file that only that user can read (`chmod 600`).
 - **One decision per run:** `npm run once` from cron (e.g. every 5 minutes).
 
-You can also skip the bot loop for simple orders. Tollkit Wallet's built-in autopilot handles limit buys, stop-losses, take-profits, trailing stops and recurring buys (`npx tollkit-wallet rule add "..."`, then `npx tollkit-wallet autopilot`).
+You can also skip the bot loop for simple orders. TOLLkit Wallet's built-in autopilot handles limit buys, stop-losses, take-profits, trailing stops and recurring buys (`npx tollkit-wallet rule add "..."`, then `npx tollkit-wallet autopilot`).
 
 ## Important
 
